@@ -39,22 +39,17 @@ class Operations:
         :return: employee object
         """
         try:
-            company_name = input("Please enter company name: ")
-            full_time_hrs = int(input("Please enter the full time hours your company: "))
-            part_time_hrs = int(input("Please enter the part time hours your company: "))
-            max_work_days = int(input("Please enter the maximum number of working days in a month "
-                                      "that an employee should not exceed: "))
-            max_work_hours = int(input("Please enter the maximum number of working hours in a month "
-                                       "that an employee should not exceed: "))
-            wage_per_hour = int(input("Please enter the wage per hour: "))
-            employee_object = Employee(
-                part_time_hr=part_time_hrs,
-                full_time_hr=full_time_hrs,
-                max_work_days=max_work_days,
-                max_work_hrs=max_work_hours,
-                wage_per_hr=wage_per_hour,
-                company_name=company_name
-            )
+            company_details = {"company_name": input("Please enter company name: "),
+                               "full_time_hr": int(input("Please enter the full time hours your company: ")),
+                               "part_time_hr": int(input("Please enter the part time hours your company: ")),
+                               "max_work_days": int(input("Please enter the maximum number of working days in a month "
+                                                          "that an employee should not exceed: ")),
+                               "max_work_hrs": int(input("Please enter the maximum number of working hours "
+                                                         "in a month that an employee should not exceed: ")),
+                               "wage_per_hr": int(input("Please enter the wage per hour: "))
+                               }
+
+            employee_object = Employee(company_details)
             employee_object.adds_calculated_values()
             return employee_object
         except TypeError:
