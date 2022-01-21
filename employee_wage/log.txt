@@ -1,0 +1,6 @@
+2022-01-21 18:28:36,384 - exception 
+ 
+Traceback (most recent call last):
+  File "D:\bridgelabz\python\employee_wage\services\operations.py", line 47, in company_object_creator
+    "max_work_hrs": int(input("Please enter the maximum number of working hours "
+ValueError: invalid literal for int() with base 10: ''
